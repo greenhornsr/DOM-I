@@ -63,25 +63,53 @@ const ctaLogo = document.getElementById("cta-img");
 ctaLogo.setAttribute('src', siteContent['cta']['img-src'])
 
 
-/*
-
-
-
-*/
-
 // main-content
-// mc h4
+// mc h4 tags
 const mcH4 = document.querySelectorAll('.text-content h4');
-console.log(mcH4);
+// console.log(mcH4);
 mcH4[0].textContent = siteContent['main-content']['features-h4'];
 mcH4[1].textContent = siteContent['main-content']['about-h4'];
 mcH4[2].textContent = siteContent['main-content']['services-h4'];
 mcH4[3].textContent = siteContent['main-content']['product-h4'];
 mcH4[4].textContent = siteContent['main-content']['vision-h4'];
 
+// mc p tags
 const mcP = document.querySelectorAll('.text-content p');
 mcP[0].textContent = siteContent['main-content']['features-content'];
 mcP[1].textContent = siteContent['main-content']['about-content'];
 mcP[2].textContent = siteContent['main-content']['services-content'];
 mcP[3].textContent = siteContent['main-content']['product-content'];
 mcP[4].textContent = siteContent['main-content']['vision-content'];
+
+
+
+/*
+
+"contact": {
+    "contact-h4" : "Contact",
+    "address" : "123 Way 456 Street Somewhere, USA",
+    "phone" : "1 (888) 888-8888",
+    "email" : "sales@greatidea.io",
+  },
+  "footer": {
+    "copyright" : "Copyright Great Idea! 2018"
+  },
+
+*/
+
+// contact + footer
+// contact 
+const contH4 = document.querySelector('.contact h4');
+// console.log(contH4);
+contH4.textContent = siteContent['contact']['contact-h4'];
+
+const contP = document.querySelectorAll('.contact p');
+console.log(contP);
+contP[0].textContent = siteContent['contact']['address'];
+contP[1].textContent = siteContent['contact']['phone'];
+contP[2].textContent = siteContent['contact']['email'];
+
+// footer
+const footy = document.querySelector('footer p');
+footy.textContent = siteContent['footer']['copyright'];
+
