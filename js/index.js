@@ -40,6 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.alt = "image of a lightbulb to the right of the phrase GREAT IDEA"
 
 
 
@@ -48,7 +49,28 @@ const navContent = document.querySelectorAll('nav a');
 // console.log(navContent);
 navContent.forEach(function(currentValue, index){
   currentValue.textContent = siteContent['nav'][`nav-item-${index + 1}`];
+  currentValue.style.color = 'green';
 });
+
+// adding nav options
+// Nav Expectations
+const newNavEl = document.createElement('a');
+newNavEl.textContent = "Expectations";
+console.log(newNavEl);
+newNavEl.style.color = 'blue';
+const newContent = document.querySelector('nav')
+newContent.appendChild(newNavEl);
+
+
+// Nav Bonus
+const newNavEl2 = document.createElement('a');
+newNavEl2.textContent = "Bonus";
+console.log(newNavEl2);
+newNavEl2.style.color = 'blue';
+const newContent2 = document.querySelector('nav')
+newContent2.prepend(newNavEl2);
+
+
 
 // H1
 const ctaH1 = document.querySelector('h1');
@@ -61,6 +83,7 @@ ctaButton.textContent = siteContent['cta']['button'];
 // cta Logo Image
 const ctaLogo = document.getElementById("cta-img");
 ctaLogo.setAttribute('src', siteContent['cta']['img-src'])
+ctaLogo.alt = "circlular 3D image of code"
 
 
 // main-content
